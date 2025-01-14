@@ -4,9 +4,11 @@ from django.template.loader import render_to_string
 
 
 def index(request):
-    t = render_to_string('index.html')
-    return HttpResponse(t)
+    return render(request, 'keysAndPhoto/index.html')
 
+
+def about(request):
+    return render(request, 'keysAndPhoto/about.html')
 
 def categories(request, cat_id):
     return HttpResponse("Информация по категориям")
